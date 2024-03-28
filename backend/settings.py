@@ -204,8 +204,8 @@ if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOWED_ORIGINS = [
-        "http://localhost:3000/",
-        "http://127.0.0.1:3000/",
+        "https://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
+        "http://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
     ]
 
 
