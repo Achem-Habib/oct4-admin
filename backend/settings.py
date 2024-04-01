@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    "rest_framework_simplejwt",
+    'rest_framework_simplejwt',
     'django_summernote',
+    'cloudinary_storage',
+    'cloudinary',
 
     "django.contrib.sites",
 
@@ -144,6 +146,8 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 MEDIA_DIR = join(BASE_DIR, 'media')
 
@@ -204,6 +208,7 @@ if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOWED_ORIGINS = [
+        "oct4.vercel.app",
         "https://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
         "http://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
     ]
@@ -221,3 +226,8 @@ CHECKOUT_SUCCESS_URL = os.getenv('CHECKOUT_SUCCESS_URL')
 CHECKOUT_FAILED_URL = os.getenv('CHECKOUT_FAILED_URL')
 
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dhdgyaagw',
+    'API_KEY': '169999488689823',
+    'API_SECRET': 'QOZatClSbZ8FooNaMi5tUJ7bLis',
+}
