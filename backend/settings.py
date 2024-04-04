@@ -168,7 +168,7 @@ SIMPLE_JWT = {
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": True,
-    "SIGNING_KEY": "complexsigningkey",  # generate a key and replace me
+    "SIGNING_KEY": os.getenv('SIGNING_KEY'),  # generate a key and replace me
     "ALGORITHM": "HS512",
 }
 
@@ -217,7 +217,7 @@ else:
 
 
 #stripe
-STRIPE_SECRET_KEY = os.getenv('STIPE_SECRET_KEY')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET')
 
 
@@ -227,7 +227,7 @@ CHECKOUT_FAILED_URL = os.getenv('CHECKOUT_FAILED_URL')
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dhdgyaagw',
-    'API_KEY': '169999488689823',
-    'API_SECRET': 'QOZatClSbZ8FooNaMi5tUJ7bLis',
+    'CLOUD_NAME': os.getenv("CLOUDINARY_CLOUD_NAME"),
+    'API_KEY': os.getenv("CLOUDINARY_API_KEY"),
+    'API_SECRET': os.getenv("CLOUDINARY_API_SECRET"),
 }
