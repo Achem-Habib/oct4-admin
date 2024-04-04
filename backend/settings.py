@@ -208,7 +208,7 @@ if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOWED_ORIGINS = [
-        "oct4.vercel.app",
+        "https://oct4.vercel.app/",
         "https://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
         "http://oct4-cnr7glqiq-achemhabibs-projects.vercel.app/",
     ]
