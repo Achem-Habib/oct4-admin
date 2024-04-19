@@ -109,7 +109,7 @@ class ProductSearchView(generics.ListAPIView):
 
 
 class CustomPageNumberPagination(PageNumberPagination):
-    page_size = 5  # Set the number of items per page
+    page_size = 20  # Set the number of items per page
     page_size_query_param = 'page_size'
     max_page_size = 100
 
